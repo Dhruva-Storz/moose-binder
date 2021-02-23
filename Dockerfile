@@ -5,7 +5,6 @@ MAINTAINER Dilawar Singh <dilawar.s.rajput@gmail.com>
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install -y python2.7
 RUN apt-get install -y wget
-RUN pip install matplotlib
 RUN apt-get install -y ipython ipython-notebook
 RUN apt-get install curl
 
@@ -20,6 +19,7 @@ RUN apt-key add - < /tmp/Release.key
 RUN sh -c "echo 'deb http://download.opensuse.org/repositories/home:/moose/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/moose.list"
 RUN apt-get update && apt-get install -y --allow-unauthenticated moose
 RUN pip install pip  --upgrade
+RUN pip install matplotlib
 RUN pip install python-libsbml
 RUN pip install --ignore-installed pyzmq ipython
 RUN pip install jupyter --upgrade
