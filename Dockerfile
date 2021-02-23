@@ -41,4 +41,4 @@ USER ${NB_USER}
 
 
 RUN ls -la /home/mooser/
-
+RUN cp /home/mooser/Gallery_Moose_Multiscale.png /
