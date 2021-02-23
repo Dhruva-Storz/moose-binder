@@ -6,7 +6,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install -y python2.7
 RUN apt-get install -y wget
 RUN apt-get install -y python-matplotlib
-RUN apt-get install -y ipython python-pip ipython-notebook
+RUN apt-get install -y ipython ipython-notebook
+
+#RUN sudo easy_install pip==20.3.4
+RUN curl https://bootstrap.pypa.io/2.7/get-pip.py --output get-pip.py
+RUN python get-pip.py
+
 
 RUN wget -nv https://download.opensuse.org/repositories/home:moose/xUbuntu_16.04/Release.key -O /tmp/Release.key
 RUN apt-key add - < /tmp/Release.key
