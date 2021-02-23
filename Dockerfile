@@ -32,6 +32,8 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER}
+    
+RUN ls -la
 
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
