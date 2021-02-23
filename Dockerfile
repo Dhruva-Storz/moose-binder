@@ -36,9 +36,7 @@ RUN adduser --disabled-password \
 # Make sure the contents of our repo are in ${HOME}
 COPY . ${HOME}
 USER root
+RUN cp /home/mooser/Gallery_Moose_Multiscale.png /
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-
-RUN ls -la /home/mooser/
-RUN cp /home/mooser/Gallery_Moose_Multiscale.png /
