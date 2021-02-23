@@ -21,7 +21,7 @@ RUN sh -c "echo 'deb http://download.opensuse.org/repositories/home:/moose/xUbun
 RUN apt-get update && apt-get install -y --allow-unauthenticated moose
 RUN pip install pip  --upgrade
 RUN pip install python-libsbml
-RUN apt-get remove python-zmq
+RUN pip install --ignore-installed pyzmq
 RUN pip install jupyter --upgrade
 
 ENV NB_USER mooser
