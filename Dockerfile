@@ -7,6 +7,8 @@ RUN apt-get install -y python2.7
 RUN apt-get install -y wget
 RUN apt-get install -y python-matplotlib
 RUN apt-get install -y ipython ipython-notebook
+RUN apt-get install curl
+
 
 #RUN sudo easy_install pip==20.3.4
 RUN curl https://bootstrap.pypa.io/2.7/get-pip.py --output get-pip.py
