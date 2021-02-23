@@ -1,7 +1,8 @@
 FROM ubuntu:16.04
 MAINTAINER Dilawar Singh <dilawar.s.rajput@gmail.com>
 
-RUN apt-get update 
+#RUN apt-get update 
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install -y python2.7
 RUN apt-get install -y wget
 RUN apt-get install -y python-matplotlib
