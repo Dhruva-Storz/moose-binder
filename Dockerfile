@@ -5,7 +5,7 @@ MAINTAINER Dilawar Singh <dilawar.s.rajput@gmail.com>
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get install -y python2.7
 RUN apt-get install -y wget
-RUN apt-get install -y python-matplotlib==2.2.2
+RUN pip install matplotlib
 RUN apt-get install -y ipython ipython-notebook
 RUN apt-get install curl
 
